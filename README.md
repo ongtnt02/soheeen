@@ -31,6 +31,10 @@ LMS 대량 고객 메시지 광고와 메타(Meta) 광고를 기획·총괄 운�
 | `process.html` | **진행 과정** — 5단계(상담·목표 진단 → 매체·타겟 설계 → 파트너 매칭·검수 → 집행·운영 → 리포트·최적화) |
 | `contact.html` | **문의하기** — 연락처 자리, 상담 신청 폼(mailto 방식) |
 | `styles.css` | 5개 페이지가 함께 쓰는 공통 스타일 (색·여백·반응형·인쇄) |
+| `og-image.png` | 카카오톡·문자 공유 시 뜨는 대표 이미지 1200×630 (브랜드·슬로건) |
+| `robots.txt` | 검색 로봇 수집 허용 + 사이트맵 위치 안내 |
+| `sitemap.xml` | 5개 페이지 주소 목록 (네이버·구글에 제출) |
+| `tools/make_og_image.py` | `og-image.png`를 다시 만드는 스크립트 (문구 수정 시 사용) |
 | `preview-home-desktop.png` | 홈 화면 PC(1440px) 전체 캡처 |
 | `preview-home-mobile.png` | 홈 화면 폰(390px) 전체 캡처 |
 | `preview-services-desktop.png` | 서비스 화면 PC(1440px) 전체 캡처 |
@@ -160,12 +164,29 @@ git add -A && git commit -m "문구 수정" && git push
 
 ---
 
-## 9. 다음 단계 (공개·운영)
+## 9. 검색 등록·공유 미리보기 (2026-11-20 추가)
+
+| 항목 | 내용 |
+|---|---|
+| 표준 주소(canonical) | 5개 페이지 각각 자기 주소로 지정 |
+| Open Graph | `og:type`·`og:title`·`og:description`·`og:url`·`og:site_name`·`og:image`(1200×630) + 카카오톡용 `og:locale` |
+| 트위터 카드 | `twitter:card=summary_large_image` + 제목·설명·이미지 |
+| 대표 이미지 | `og-image.png` (1200×630). 문구를 바꾸려면 `python3 tools/make_og_image.py` 실행 후 푸시 |
+| 로봇 안내 | `robots.txt` (전체 허용 + `Sitemap:` 줄) |
+| 사이트맵 | `sitemap.xml` — 홈·소개·서비스·진행과정·문의 5개 주소 |
+| 네이버 | 서치어드바이저(https://searchadvisor.naver.com) 웹마스터 도구에 사이트 등록·소유확인·사이트맵 제출 |
+| 구글 | 서치 콘솔(https://search.google.com/search-console)에 URL 접두어 방식으로 등록·소유확인·사이트맵 제출 |
+
+> 검색 결과에 실제로 노출되기까지는 보통 며칠에서 1~2주 걸립니다. 등록 직후에는 `site:ongtnt02.github.io/soheeen` 로 색인 여부를 확인할 수 있습니다.
+
+---
+
+## 10. 다음 단계 (공개·운영)
 
 1. **상담 시간 확정** → contact.html 두 곳의 '상담 안내' 문구를 실제 시간대로 교체 → 푸시
 2. **폼 자동 접수** — 메일 앱 방식 대신 자동 접수를 원하면 Formspree·Google Forms·자체 서버 중 선택
 3. **개인정보 처리방침 페이지** — 폼을 실제로 받으면 수집·이용 동의 문구와 처리방침이 필요합니다
 4. **도메인** — 원하는 주소(.com / .co.kr) 구매 후 GitHub Pages에 연결. `.co.kr`은 사업자등록증이 필요합니다
-5. **공유 미리보기(OG) 이미지** — 카카오톡·문자로 링크를 보낼 때 뜨는 대표 이미지(1200×630) 1장
+5. ~~**공유 미리보기(OG) 이미지**~~ — 2026-11-20 완료 (`og-image.png`)  
 6. **파비콘** — 지금은 인라인 SVG로 임시 처리
 7. **실적·사례 섹션** — 실제 수치나 사례가 생기면 추가
