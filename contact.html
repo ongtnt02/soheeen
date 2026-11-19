@@ -16,10 +16,6 @@
 <body>
 <a class="skip-link" href="#main">본문 바로가기</a>
 
-<div class="draft-bar" role="note">
-  <span class="draft-dot" aria-hidden="true"></span>
-  <span><strong>초안 v2</strong> · <code>{{ }}</code> 표시는 확정 후 교체됩니다. 연락처·이메일·주소는 아직 미정입니다.</span>
-</div>
 
 <header class="site-header">
   <div class="wrap header-inner">
@@ -65,8 +61,8 @@
           </p>
         </div>
         <aside class="page-hero-aside">
-          <span class="aside-label">상담 시간</span>
-          <p>{{상담 시간}}</p>
+          <span class="aside-label">상담 안내</span>
+          <p>전화·이메일로 문의 주시면 순서대로 답변드립니다</p>
           <div class="chip-row">
             <span class="chip chip--plain">이메일 문의</span>
             <span class="chip chip--plain">전화 상담</span>
@@ -82,26 +78,26 @@
         <p class="section-label">연락처</p>
         <h2>편한 방법으로 연락 주세요.</h2>
         <p class="contact-lead">
-          아래 연락처는 아직 확정 전입니다. 실제 연락처·이메일이 정해지면 이 자리에 들어가고,
-          문의 폼도 바로 동작합니다.
+          전화·이메일, 또는 아래 상담 신청 폼 중 편한 방법으로 연락 주세요.
+          영업일 기준으로 순서대로 답변드립니다.
         </p>
 
         <ul class="contact-info">
           <li>
             <span class="ci-label">이메일</span>
-            <a class="ci-value" href="mailto:{{이메일}}">{{이메일}}</a>
+            <a class="ci-value" href="mailto:ssook73@hanmail.net">ssook73@hanmail.net</a>
           </li>
           <li>
             <span class="ci-label">전화</span>
-            <a class="ci-value" href="tel:{{연락처}}">{{연락처}}</a>
+            <a class="ci-value" href="tel:010-4434-2616">010-4434-2616</a>
           </li>
           <li>
             <span class="ci-label">주소</span>
-            <span class="ci-value">{{주소}}</span>
+            <span class="ci-value">서울특별시 은평구 서오릉로 134-18, A동 401호 (대조동)</span>
           </li>
           <li>
-            <span class="ci-label">상담 시간</span>
-            <span class="ci-value">{{상담 시간}}</span>
+            <span class="ci-label">상담 안내</span>
+            <span class="ci-value">전화·이메일로 문의 주시면 순서대로 답변드립니다</span>
           </li>
         </ul>
 
@@ -121,8 +117,8 @@
         <h3 class="form-title">상담 신청</h3>
         <p class="form-sub">필수 항목만 적어 주셔도 됩니다. 영업일 기준으로 순서대로 답변드립니다.</p>
 
-        <!-- 초안: action은 mailto입니다. 폼 전송 기능(백엔드/폼 서비스)은 연결되어 있지 않습니다. -->
-        <form class="form" action="mailto:{{이메일}}?subject=%5B%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EB%AC%B8%EC%9D%98%5D" method="post" enctype="text/plain">
+        <!-- 서버·외부 폼 서비스 없이, 방문자의 메일 앱으로 내용을 전달합니다. -->
+        <form class="form" action="mailto:ssook73@hanmail.net?subject=%5B%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EB%AC%B8%EC%9D%98%5D" method="post" enctype="text/plain">
           <div class="field">
             <label for="f-name">이름 <span class="req" aria-hidden="true">*</span></label>
             <input id="f-name" name="이름" type="text" autocomplete="name" placeholder="홍길동" required>
@@ -155,7 +151,7 @@
           </label>
           <button class="btn btn-primary btn-block" type="submit">문의 보내기</button>
           <p class="form-note" id="form-note">
-            전송 버튼을 누르면 메일 앱이 열립니다. (초안 단계 — 폼 자동 전송 기능은 아직 연결되지 않았습니다.)
+            전송 버튼을 누르면 작성하신 내용으로 메일 앱이 열립니다. 메일 앱에서 전송해 주세요.
           </p>
         </form>
       </div>
@@ -201,13 +197,12 @@
   </div>
 
   <div class="wrap footer-info">
-    <p>대표 {{대표자}} · 사업자등록번호 {{사업자등록번호}}</p>
-    <p>{{주소}} · {{연락처}} · {{이메일}}</p>
+    <p>대표 김현숙 · 사업자등록번호 516-05-02089</p>
+    <p>서울특별시 은평구 서오릉로 134-18, A동 401호 (대조동) · 010-4434-2616 · ssook73@hanmail.net</p>
   </div>
 
   <div class="wrap footer-bottom">
     <p>© <span class="year">2026</span> 소희엔. All rights reserved.</p>
-    <p class="muted">이 사이트는 초안 버전입니다.</p>
   </div>
 </footer>
 
@@ -252,9 +247,9 @@
       var to = (form.getAttribute('action') || '').replace(/^mailto:/, '').split('?')[0];
       var d = new FormData(form);
       var val = function (k) { return (d.get(k) || '').toString().trim(); };
-      if (to.indexOf('{{') !== -1) {
+      if (!to) {
         if (note) {
-          note.textContent = '아직 실제 문의 이메일이 등록되지 않았습니다. contact.html의 {{이메일}} 자리에 주소를 넣으면 메일 앱으로 바로 연결됩니다.';
+          note.textContent = '문의 이메일 주소가 설정되지 않았습니다.';
           note.classList.add('is-warn');
         }
         return;
