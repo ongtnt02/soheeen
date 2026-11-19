@@ -34,9 +34,13 @@ LMS 대량 고객 메시지 광고와 메타(Meta) 광고를 기획·총괄 운�
 | `preview-home-desktop.png` | 홈 화면 PC(1440px) 전체 캡처 |
 | `preview-home-mobile.png` | 홈 화면 폰(390px) 전체 캡처 |
 | `preview-services-desktop.png` | 서비스 화면 PC(1440px) 전체 캡처 |
-| `preview-live-github-pages.png` | 실제 배포된 사이트(GitHub Pages) 홈 화면 캡처 |
+| `preview-live-github-pages.png` | 실제 배포된 사이트(GitHub Pages) 홈 화면 캡처 (초안 v2 시점) |
+| `preview-live-2026-11-19.png` | 사업자 정보 반영 후 실서비스 홈 화면 캡처 (2026-11-19) |
+| `preview-contact-desktop.png` | 사업자 정보 반영 후 문의하기 화면 — 연락처·주소·상담 안내 |
+| `preview-footer-desktop.png` | 사업자 정보 반영 후 푸터 — 대표·사업자등록번호·주소·연락처·이메일 |
 
 > 미리보기 PNG는 확인용이며, GitHub에는 올리지 않았습니다(배포 용량·구성 정리). 이 폴더와 구글 드라이브에는 있습니다.
+> `preview-home-desktop.png`·`preview-home-mobile.png`·`preview-services-desktop.png`·`preview-live-github-pages.png`는 초안 v2(사업자 정보 반영 전) 시점의 전체 화면 캡처입니다. 상단에 `초안 v2` 안내 띄가 찍혀 있습니다.
 
 ### 페이지 연결 구조
 
