@@ -34,8 +34,9 @@ LMS 대량 고객 메시지 광고와 메타(Meta) 광고를 기획·총괄 운�
 | `preview-home-desktop.png` | 홈 화면 PC(1440px) 전체 캡처 |
 | `preview-home-mobile.png` | 홈 화면 폰(390px) 전체 캡처 |
 | `preview-services-desktop.png` | 서비스 화면 PC(1440px) 전체 캡처 |
+| `preview-live-github-pages.png` | 실제 배포된 사이트(GitHub Pages) 홈 화면 캡처 |
 
-> 미리보기 PNG 3장은 확인용이며, GitHub에는 올리지 않았습니다(배포 용량·구성 정리). 이 폴더와 구글 드라이브에는 있습니다.
+> 미리보기 PNG는 확인용이며, GitHub에는 올리지 않았습니다(배포 용량·구성 정리). 이 폴더와 구글 드라이브에는 있습니다.
 
 ### 페이지 연결 구조
 
@@ -140,7 +141,7 @@ Chromium 헤드리스 브라우저로 5개 페이지를 실제로 열어 확인�
 |---|---|
 | 사이트 주소 | https://ongtnt02.github.io/soheeen/ |
 | 저장소 | https://github.com/ongtnt02/soheeen (공개) |
-| 배포 방식 | GitHub Pages, `main` 브랜치 루트 |
+| 배포 방식 | GitHub Pages, `main` 브랜치 루트 (Settings → Pages → Deploy from a branch) |
 | 백업 사본 | 구글 드라이브 `소희엔 홈페이지` 폴더 |
 
 ### 수정 후 다시 배포하는 방법
