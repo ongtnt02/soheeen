@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>문의하기 | 소희엔</title>
+<meta name="description" content="소희엔 광고 운영 상담 문의. 업종, 목표, 예산 규모, 현재 운영 중인 매체를 알려주시면 필요한 범위부터 정리해 드립니다.">
+<meta name="theme-color" content="#0f1b2d">
+<meta property="og:type" content="website">
+<meta property="og:title" content="문의하기 | 소희엔">
+<meta property="og:description" content="지금 상황을 알려주시면, 필요한 범위부터 정리해 드립니다.">
+<meta property="og:locale" content="ko_KR">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232456f0'/%3E%3Cpath d='M9 22V13M16 22V9M23 22v-6' stroke='white' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip-link" href="#main">본문 바로가기</a>
+
+<div class="draft-bar" role="note">
+  <span class="draft-dot" aria-hidden="true"></span>
+  <span><strong>초안 v2</strong> · <code>{{ }}</code> 표시는 확정 후 교체됩니다. 연락처·이메일·주소는 아직 미정입니다.</span>
+</div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="소희엔 홈으로">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="32" height="32" fill="none">
+          <rect x="1.5" y="1.5" width="29" height="29" rx="8" stroke="currentColor" stroke-width="2"/>
+          <path d="M9 22V12.5M16 22V9M23 22v-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-name">소희엔</span>
+        <span class="brand-sub">AD OPERATIONS</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="주요 메뉴">
+      <a href="index.html">홈</a>
+      <a href="about.html">회사 소개</a>
+      <a href="services.html">서비스</a>
+      <a href="process.html">진행 과정</a>
+      <a href="contact.html" aria-current="page">문의</a>
+    </nav>
+
+    <a class="btn btn-primary btn-sm header-cta" href="contact.html">상담 문의</a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="메뉴 열기">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span>문의하기 · Contact</p>
+      <div class="page-hero-inner">
+        <div>
+          <h1>지금 상황을 알려주시면,<br class="br-d"> 필요한 범위부터 정리해 드립니다.</h1>
+          <p class="lead">
+            업종과 목표, 예산 규모, 현재 운영 중인 매체를 함께 알려주시면 더 구체적으로 답변드릴 수 있습니다.
+            아직 정해지지 않은 부분은 비워 두셔도 괜찮습니다.
+          </p>
+        </div>
+        <aside class="page-hero-aside">
+          <span class="aside-label">상담 시간</span>
+          <p>{{상담 시간}}</p>
+          <div class="chip-row">
+            <span class="chip chip--plain">이메일 문의</span>
+            <span class="chip chip--plain">전화 상담</span>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap contact-grid">
+      <div class="contact-intro">
+        <p class="section-label">연락처</p>
+        <h2>편한 방법으로 연락 주세요.</h2>
+        <p class="contact-lead">
+          아래 연락처는 아직 확정 전입니다. 실제 연락처·이메일이 정해지면 이 자리에 들어가고,
+          문의 폼도 바로 동작합니다.
+        </p>
+
+        <ul class="contact-info">
+          <li>
+            <span class="ci-label">이메일</span>
+            <a class="ci-value" href="mailto:{{이메일}}">{{이메일}}</a>
+          </li>
+          <li>
+            <span class="ci-label">전화</span>
+            <a class="ci-value" href="tel:{{연락처}}">{{연락처}}</a>
+          </li>
+          <li>
+            <span class="ci-label">주소</span>
+            <span class="ci-value">{{주소}}</span>
+          </li>
+          <li>
+            <span class="ci-label">상담 시간</span>
+            <span class="ci-value">{{상담 시간}}</span>
+          </li>
+        </ul>
+
+        <div class="prep">
+          <h3>상담 전에 정리해 두시면 좋은 것</h3>
+          <ul>
+            <li>업종과 주력 상품(또는 서비스)</li>
+            <li>이번 광고의 목표 — 매출, 신규 유입, 인지도 등</li>
+            <li>예산 규모와 희망 집행 시기</li>
+            <li>현재 운영 중인 매체와 실행 파트너가 있다면 그 범위</li>
+            <li>지금까지의 성과에서 아쉬웠던 점</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <h3 class="form-title">상담 신청</h3>
+        <p class="form-sub">필수 항목만 적어 주셔도 됩니다. 영업일 기준으로 순서대로 답변드립니다.</p>
+
+        <!-- 초안: action은 mailto입니다. 폼 전송 기능(백엔드/폼 서비스)은 연결되어 있지 않습니다. -->
+        <form class="form" action="mailto:{{이메일}}?subject=%5B%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EB%AC%B8%EC%9D%98%5D" method="post" enctype="text/plain">
+          <div class="field">
+            <label for="f-name">이름 <span class="req" aria-hidden="true">*</span></label>
+            <input id="f-name" name="이름" type="text" autocomplete="name" placeholder="홍길동" required>
+          </div>
+          <div class="field">
+            <label for="f-company">회사·브랜드명</label>
+            <input id="f-company" name="회사명" type="text" autocomplete="organization" placeholder="선택 입력">
+          </div>
+          <div class="field">
+            <label for="f-contact">연락처 <span class="req" aria-hidden="true">*</span></label>
+            <input id="f-contact" name="연락처" type="text" autocomplete="tel" placeholder="010-0000-0000 또는 이메일" required>
+          </div>
+          <div class="field">
+            <label for="f-interest">관심 서비스</label>
+            <select id="f-interest" name="관심서비스">
+              <option value="아직 미정">아직 미정</option>
+              <option value="LMS 대량 고객 메시지 광고">LMS 대량 고객 메시지 광고</option>
+              <option value="메타(Meta) 광고">메타(Meta) 광고</option>
+              <option value="둘 다">둘 다</option>
+              <option value="실행 파트너 총괄·리포팅">실행 파트너 총괄·리포팅</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-message">문의 내용 <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="f-message" name="문의내용" rows="4" placeholder="업종, 목표, 예산 규모, 현재 운영 중인 매체를 간단히 적어주세요." required></textarea>
+          </div>
+          <label class="check">
+            <input type="checkbox" name="동의" required>
+            <span>문의 응대를 위한 개인정보 수집·이용에 동의합니다.</span>
+          </label>
+          <button class="btn btn-primary btn-block" type="submit">문의 보내기</button>
+          <p class="form-note" id="form-note">
+            전송 버튼을 누르면 메일 앱이 열립니다. (초안 단계 — 폼 자동 전송 기능은 아직 연결되지 않았습니다.)
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap cta-inner">
+      <div class="cta-copy">
+        <h2>상담 전에 서비스를 먼저 보고 싶다면.</h2>
+        <p>LMS 대량 고객 메시지 광고와 메타 광고를 어떻게 운영하는지 정리해 두었습니다.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-on-dark btn-lg" href="services.html">서비스 보기</a>
+        <a class="btn btn-primary btn-lg" href="process.html">진행 과정 보기</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-top">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
+          <rect x="1.5" y="1.5" width="29" height="29" rx="8" stroke="currentColor" stroke-width="2"/>
+          <path d="M9 22V12.5M16 22V9M23 22v-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <div>
+        <p class="footer-name">소희엔</p>
+        <p class="footer-desc">LMS·메타 광고 기획·총괄 운영 대행</p>
+      </div>
+    </div>
+
+    <nav class="footer-nav" aria-label="바로가기">
+      <a href="index.html">홈</a>
+      <a href="about.html">회사 소개</a>
+      <a href="services.html">서비스</a>
+      <a href="process.html">진행 과정</a>
+      <a href="contact.html">문의</a>
+    </nav>
+  </div>
+
+  <div class="wrap footer-info">
+    <p>대표 {{대표자}} · 사업자등록번호 {{사업자등록번호}}</p>
+    <p>{{주소}} · {{연락처}} · {{이메일}}</p>
+  </div>
+
+  <div class="wrap footer-bottom">
+    <p>© <span class="year">2026</span> 소희엔. All rights reserved.</p>
+    <p class="muted">이 사이트는 초안 버전입니다.</p>
+  </div>
+</footer>
+
+<script>
+  // 모바일 메뉴
+  (function () {
+    var btn = document.querySelector('.nav-toggle');
+    var nav = document.getElementById('nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function () {
+      var open = nav.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기');
+      document.body.classList.toggle('nav-open', open);
+    });
+    nav.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        nav.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-label', '메뉴 열기');
+        document.body.classList.remove('nav-open');
+      }
+    });
+  })();
+
+  // 연도
+  (function () {
+    var y = new Date().getFullYear();
+    var nodes = document.querySelectorAll('.year');
+    for (var i = 0; i < nodes.length; i++) nodes[i].textContent = y;
+  })();
+
+  // 문의 폼 → 메일 앱으로 전달 (서버·외부 서비스 없이 동작)
+  (function () {
+    var form = document.querySelector('.form');
+    if (!form) return;
+    var note = document.getElementById('form-note');
+    var defaultNote = note ? note.textContent : '';
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      var to = (form.getAttribute('action') || '').replace(/^mailto:/, '').split('?')[0];
+      var d = new FormData(form);
+      var val = function (k) { return (d.get(k) || '').toString().trim(); };
+      if (to.indexOf('{{') !== -1) {
+        if (note) {
+          note.textContent = '아직 실제 문의 이메일이 등록되지 않았습니다. contact.html의 {{이메일}} 자리에 주소를 넣으면 메일 앱으로 바로 연결됩니다.';
+          note.classList.add('is-warn');
+        }
+        return;
+      }
+      var subject = '[홈페이지 문의] ' + (val('회사명') || val('이름'));
+      var body = [
+        '이름: ' + val('이름'),
+        '회사·브랜드: ' + val('회사명'),
+        '연락처: ' + val('연락처'),
+        '관심 서비스: ' + val('관심서비스'),
+        '',
+        val('문의내용')
+      ].join('\n');
+      window.location.href = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      if (note) { note.textContent = defaultNote; note.classList.remove('is-warn'); }
+    });
+  })();
+</script>
+</body>
+</html>
