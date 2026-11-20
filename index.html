@@ -289,90 +289,109 @@
         </p>
       </div>
 
-      <div class="site-table">
+      <!-- 요약 지표: 숫자는 아래 목록에서 계산한 값만 사용 (없는 값은 만들지 않음) -->
+      <ul class="pf-stats" aria-label="진행 현장 요약">
+        <li class="pf-stat">
+          <span class="pf-stat-num">14<span>곳</span></span>
+          <span class="pf-stat-label">진행 현장</span>
+        </li>
+        <li class="pf-stat">
+          <span class="pf-stat-num">19,000<span>평</span></span>
+          <span class="pf-stat-label">평 단위 규모 합계</span>
+        </li>
+        <li class="pf-stat">
+          <span class="pf-stat-num">2,451<span>세대</span></span>
+          <span class="pf-stat-label">최대 단지 규모</span>
+        </li>
+        <li class="pf-stat">
+          <span class="pf-stat-num">2<span>개 권역</span></span>
+          <span class="pf-stat-label">경기 양평 · 서울·수도권</span>
+        </li>
+      </ul>
+      <p class="pf-stats-note">
+        규모는 확인된 값만 표시했습니다. 19,000평은 평 단위로 확인된 2개 현장(7,000평·12,000평)의 합계이고,
+        2,451세대는 은평구 대조동 재개발 단지(2026년 입주) 기준입니다.
+      </p>
+
+      <div class="site-groups">
         <!--
-          진행 현장 목록 — 현장 1곳이 <li class="site-row"> 한 줄입니다.
-          항목을 추가할 때는 한 줄을 복사해 지역(.site-area)·유형(.site-type)·규모(.site-scale)만 바꿔 넣으면 됩니다.
-          규모나 유형을 모르면 해당 칸은 비워 두세요. (프로젝트 정식 명칭은 적지 않습니다.)
+          진행 현장 카드 — 현장 1곳이 <li class="site-card"> 한 장입니다.
+          지역(.site-card-area)은 항상 넣고, 유형(.site-card-type)·규모(.site-card-scale)는 확인된 것만 넣습니다.
+          규모를 모르면 <p class="site-card-scale is-empty">—</p>, 유형까지 모르면 카드에 class="site-card--bare"를 더합니다.
+          (프로젝트 정식 명칭은 적지 않습니다.)
         -->
         <div class="site-group">
-          <p class="site-group-head"><span>경기 양평</span><span class="site-group-count">7</span></p>
-          <ul class="site-list">
-            <li class="site-row">
-              <span class="site-area">양평</span>
-              <span class="site-type">전원주택</span>
-              <span class="site-scale">7,000평</span>
+          <p class="site-group-head"><span>경기 양평</span><span class="site-group-count">7곳</span></p>
+          <ul class="site-grid">
+            <li class="site-card">
+              <p class="site-card-area">양평</p>
+              <p class="site-card-type">전원주택</p>
+              <p class="site-card-scale"><b>7,000</b>평</p>
             </li>
-            <li class="site-row">
-              <span class="site-area">양평</span>
-              <span class="site-type">타운하우스 단지</span>
-              <span class="site-scale">12,000평</span>
+            <li class="site-card">
+              <p class="site-card-area">양평</p>
+              <p class="site-card-type">타운하우스 단지</p>
+              <p class="site-card-scale"><b>12,000</b>평</p>
             </li>
-            <li class="site-row">
-              <span class="site-area">양평</span>
-              <span class="site-type">전원형 타운하우스</span>
-              <span class="site-scale">20세대</span>
+            <li class="site-card">
+              <p class="site-card-area">양평</p>
+              <p class="site-card-type">전원형 타운하우스</p>
+              <p class="site-card-scale"><b>20</b>세대</p>
             </li>
-            <li class="site-row">
-              <span class="site-area">양평</span>
-              <span class="site-type">타운하우스 단지</span>
-              <span class="site-scale">110세대</span>
+            <li class="site-card">
+              <p class="site-card-area">양평</p>
+              <p class="site-card-type">타운하우스 단지</p>
+              <p class="site-card-scale"><b>110</b>세대</p>
             </li>
-            <li class="site-row">
-              <span class="site-area">양평</span>
-              <span class="site-type">타운하우스 단지</span>
-              <span class="site-scale"></span>
+            <li class="site-card">
+              <p class="site-card-area">양평</p>
+              <p class="site-card-type">타운하우스 단지</p>
+              <p class="site-card-scale is-empty">—</p>
             </li>
-            <li class="site-row">
-              <span class="site-area">지평</span>
-              <span class="site-type"></span>
-              <span class="site-scale"></span>
+            <li class="site-card site-card--bare">
+              <p class="site-card-area">지평</p>
             </li>
-            <li class="site-row">
-              <span class="site-area">용문</span>
-              <span class="site-type"></span>
-              <span class="site-scale"></span>
+            <li class="site-card site-card--bare">
+              <p class="site-card-area">용문</p>
             </li>
           </ul>
         </div>
 
         <div class="site-group">
-          <p class="site-group-head"><span>서울 · 수도권</span><span class="site-group-count">7</span></p>
-          <ul class="site-list">
-            <li class="site-row">
-              <span class="site-area">의정부</span>
-              <span class="site-type">아파트</span>
-              <span class="site-scale">500세대</span>
+          <p class="site-group-head"><span>서울 · 수도권</span><span class="site-group-count">7곳</span></p>
+          <ul class="site-grid">
+            <li class="site-card">
+              <p class="site-card-area">의정부</p>
+              <p class="site-card-type">아파트</p>
+              <p class="site-card-scale"><b>500</b>세대</p>
             </li>
-            <li class="site-row">
-              <span class="site-area">강남</span>
-              <span class="site-type">하이엔드 아파트</span>
-              <span class="site-scale"></span>
+            <li class="site-card">
+              <p class="site-card-area">강남</p>
+              <p class="site-card-type">하이엔드 아파트</p>
+              <p class="site-card-scale is-empty">—</p>
             </li>
-            <li class="site-row">
-              <span class="site-area">강남</span>
-              <span class="site-type">도시형 생활주택</span>
-              <span class="site-scale">27세대 (2024)</span>
+            <li class="site-card">
+              <p class="site-card-area">강남</p>
+              <p class="site-card-type">도시형 생활주택</p>
+              <p class="site-card-scale"><b>27</b>세대 (2024)</p>
             </li>
-            <li class="site-row">
-              <span class="site-area">용인</span>
-              <span class="site-type">타운하우스 단지</span>
-              <span class="site-scale"></span>
+            <li class="site-card">
+              <p class="site-card-area">용인</p>
+              <p class="site-card-type">타운하우스 단지</p>
+              <p class="site-card-scale is-empty">—</p>
             </li>
-            <li class="site-row">
-              <span class="site-area">은평구 대조동</span>
-              <span class="site-type">재개발 아파트</span>
-              <span class="site-scale">2,451세대 (2026)</span>
+            <li class="site-card">
+              <p class="site-card-area">은평구 대조동</p>
+              <p class="site-card-type">재개발 아파트</p>
+              <p class="site-card-scale"><b>2,451</b>세대 (2026)</p>
             </li>
-            <li class="site-row">
-              <span class="site-area">영등포구 양평동</span>
-              <span class="site-type">오피스텔</span>
-              <span class="site-scale">120세대</span>
+            <li class="site-card">
+              <p class="site-card-area">영등포구 양평동</p>
+              <p class="site-card-type">오피스텔</p>
+              <p class="site-card-scale"><b>120</b>세대</p>
             </li>
-            <li class="site-row">
-              <span class="site-area">여주</span>
-              <span class="site-type"></span>
-              <span class="site-scale"></span>
+            <li class="site-card site-card--bare">
+              <p class="site-card-area">여주</p>
             </li>
           </ul>
         </div>
@@ -451,6 +470,26 @@
         document.body.classList.remove('nav-open');
       }
     });
+  })();
+
+  // 진행 현장 카드 — 보이는 순간에만 살짝 페이드업 (모션 최소화 설정이면 끔)
+  (function () {
+    var cards = document.querySelectorAll('.site-card');
+    if (!cards.length || !('IntersectionObserver' in window)) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    document.documentElement.classList.add('has-reveal');
+    function show(el) { el.classList.add('is-in'); }
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        show(entry.target);
+        io.unobserve(entry.target);
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -6% 0px' });
+
+    Array.prototype.forEach.call(cards, function (el) { io.observe(el); });
   })();
 
   // 연도

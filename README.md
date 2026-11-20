@@ -42,8 +42,8 @@ LMS 대량 고객 메시지 광고와 메타(Meta) 광고를 기획·총괄 운�
 | `preview-live-2026-11-19.png` | 사업자 정보 반영 후 실서비스 홈 화면 캡처 (2026-11-19) |
 | `preview-contact-desktop.png` | 사업자 정보 반영 후 문의하기 화면 — 연락처·주소·상담 안내 |
 | `preview-footer-desktop.png` | 사업자 정보 반영 후 푸터 — 대표·사업자등록번호·주소·연락처·이메일 |
-| `preview-portfolio-desktop.png` | 진행 현장 섹션 PC(1440px) 캡처 (2026-11-20) |
-| `preview-portfolio-mobile.png` | 진행 현장 섹션 폰(390px) 캡처 (2026-11-20) |
+| `preview-portfolio-desktop.png` | 진행 현장 섹션 PC(1440px) 캡처 — 카드 그리드 (2026-11-20) |
+| `preview-portfolio-mobile.png` | 진행 현장 섹션 폰(390px) 캡처 — 카드 그리드 (2026-11-20) |
 | `PORTFOLIO.md` | 진행 현장 14건의 내부 기록 — 화면에 쓰지 않는 정식 명칭, 확인 상태, 검색 출처 |
 
 > 미리보기 PNG는 확인용이며, GitHub에는 올리지 않았습니다(배포 용량·구성 정리). 이 폴더와 구글 드라이브에는 있습니다.
@@ -194,4 +194,4 @@ git add -A && git commit -m "문구 수정" && git push
 4. **도메인** — 원하는 주소(.com / .co.kr) 구매 후 GitHub Pages에 연결. `.co.kr`은 사업자등록증이 필요합니다
 5. ~~**공유 미리보기(OG) 이미지**~~ — 2026-11-20 완료 (`og-image.png`)  
 6. **파비콘** — 지금은 인라인 SVG로 임시 처리
-7. ~~**실적·사례 섹션**~~ — 2026-11-20 추가 (진행 현장 14곳, `#portfolio`). 항목을 더할 때는 `index.html`의 `.site-list` 안 `<li class="site-row">` 한 줄을 복사해 지역·유형·규모만 바꾸면 됩니다
+7. ~~**실적·사례 섹션**~~ — 2026-11-20 추가 (진행 현장 14곳, `#portfolio`). 표 형태로 첫 배포 후 같은 날 카드 그리드 + 요약 지표로 디자인 개선 (커밋 `2e3d819` → 카드형). 항목을 더할 때는 `index.html`의 `.site-grid` 안 `<li class="site-card">` 한 장을 복사해 지역·유형·규모만 바꾸면 됩니다 (유형·규모를 모르면 해당 `<p>`를 빼거나 `—`로)
